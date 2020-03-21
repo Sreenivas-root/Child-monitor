@@ -1,0 +1,17 @@
+{% extends "parent/base.html" %}
+{% load static %}
+
+{% block content %}
+<video width="1000" height="600" autoplay controls>
+    <source src="{% static 'videos/video.mp4' %}" type='video/mp4'>
+</video>
+<script>
+        
+        function timedRefresh(timeoutPeriod) {
+            setTimeout("location.reload(true);", timeoutPeriod);
+        }
+
+    window.onload = timedRefresh(15000);
+
+</script>
+{% endblock content %}
